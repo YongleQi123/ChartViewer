@@ -15,6 +15,7 @@
 		120C7E171FC60E3C00A77B52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120C7E151FC60E3C00A77B52 /* LaunchScreen.storyboard */; };
 		120C7E221FC60E3C00A77B52 /* ChartViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C7E211FC60E3C00A77B52 /* ChartViewerTests.swift */; };
 		120C7E2D1FC60E3C00A77B52 /* ChartViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C7E2C1FC60E3C00A77B52 /* ChartViewerUITests.swift */; };
+		12DC09DE1FC74B2100B65AFE /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC09DD1FC74B2100B65AFE /* ChartViewController.swift */; };
 		F399607F08B05F8DBA8E6304 /* Pods_ChartViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BF4D2EA2EA19A4EAC7E5F8 /* Pods_ChartViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		120C7E281FC60E3C00A77B52 /* ChartViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChartViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		120C7E2C1FC60E3C00A77B52 /* ChartViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewerUITests.swift; sourceTree = "<group>"; };
 		120C7E2E1FC60E3C00A77B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12DC09DD1FC74B2100B65AFE /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		16BF4D2EA2EA19A4EAC7E5F8 /* Pods_ChartViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E859C3160797A6DF8434DDF /* Pods-ChartViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChartViewer/Pods-ChartViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		F73A5E1361B9E198D0A7696E /* Pods-ChartViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChartViewer/Pods-ChartViewer.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				120C7E0A1FC60E3C00A77B52 /* AppDelegate.swift */,
+				12DC09DD1FC74B2100B65AFE /* ChartViewController.swift */,
 				120C7E0C1FC60E3C00A77B52 /* FirstViewController.swift */,
 				120C7E0E1FC60E3C00A77B52 /* SecondViewController.swift */,
 				120C7E101FC60E3C00A77B52 /* Main.storyboard */,
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				120C7E0F1FC60E3C00A77B52 /* SecondViewController.swift in Sources */,
+				12DC09DE1FC74B2100B65AFE /* ChartViewController.swift in Sources */,
 				120C7E0B1FC60E3C00A77B52 /* AppDelegate.swift in Sources */,
 				120C7E0D1FC60E3C00A77B52 /* FirstViewController.swift in Sources */,
 			);

@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ChartViewer/ExamplesDefaults.swift">
+   </FileRef>
+   <FileRef
+      location = "group:ChartViewer/Env.swift">
+   </FileRef>
+   <FileRef
       location = "group:ChartViewer.xcodeproj">
    </FileRef>
    <FileRef
