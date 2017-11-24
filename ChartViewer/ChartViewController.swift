@@ -1,11 +1,3 @@
-//
-//  ChartViewController.swift
-//  ChartViewer
-//
-//  Created by 齐永乐 on 2017/11/23.
-//  Copyright © 2017年 Apple Inc. All rights reserved.
-//
-
 import UIKit
 import SwiftCharts
 
@@ -16,7 +8,7 @@ class ChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      //  let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
+        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
         
         var readFormatter = DateFormatter()
         readFormatter.dateFormat = "dd.MM.yyyy"
@@ -59,7 +51,7 @@ class ChartViewController: UIViewController {
             createChartPoint(dateStr: "21.10.2015", percent: 100, readFormatter: readFormatter, displayFormatter: displayFormatter)
         ]
         
-        let yValues = stride(from: 0, through: 100, by: 10).map {ChartAxisValuePercent($0, labelSettings: chartSettings)}
+        let yValues = stride(from: 0, through: 100, by: 10).map {ChartAxisValuePercent($0, labelSettings: labelSettings)}
         
         let xValues = [
             createDateAxisValue("01.10.2015", readFormatter: readFormatter, displayFormatter: displayFormatter),
@@ -138,4 +130,3 @@ class ChartViewController: UIViewController {
         }
     }
 }
-
