@@ -17,6 +17,7 @@
 		120C7E2D1FC60E3C00A77B52 /* ChartViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C7E2C1FC60E3C00A77B52 /* ChartViewerUITests.swift */; };
 		122BC5671FC74E47004FECA8 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122BC5651FC74E47004FECA8 /* Env.swift */; };
 		122BC5681FC74E47004FECA8 /* ExamplesDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122BC5661FC74E47004FECA8 /* ExamplesDefaults.swift */; };
+		124D82131FD1F9E000B3EEBA /* BarsAndLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D82121FD1F9E000B3EEBA /* BarsAndLines.swift */; };
 		12DC09DE1FC74B2100B65AFE /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC09DD1FC74B2100B65AFE /* ChartViewController.swift */; };
 		F399607F08B05F8DBA8E6304 /* Pods_ChartViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BF4D2EA2EA19A4EAC7E5F8 /* Pods_ChartViewer.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		120C7E2E1FC60E3C00A77B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		122BC5651FC74E47004FECA8 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		122BC5661FC74E47004FECA8 /* ExamplesDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesDefaults.swift; sourceTree = "<group>"; };
+		124D82121FD1F9E000B3EEBA /* BarsAndLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarsAndLines.swift; sourceTree = "<group>"; };
 		12DC09DD1FC74B2100B65AFE /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		16BF4D2EA2EA19A4EAC7E5F8 /* Pods_ChartViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E859C3160797A6DF8434DDF /* Pods-ChartViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChartViewer/Pods-ChartViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				12DC09DD1FC74B2100B65AFE /* ChartViewController.swift */,
 				120C7E0C1FC60E3C00A77B52 /* FirstViewController.swift */,
 				120C7E0E1FC60E3C00A77B52 /* SecondViewController.swift */,
+				124D82121FD1F9E000B3EEBA /* BarsAndLines.swift */,
 				120C7E101FC60E3C00A77B52 /* Main.storyboard */,
 				120C7E131FC60E3C00A77B52 /* Assets.xcassets */,
 				120C7E151FC60E3C00A77B52 /* LaunchScreen.storyboard */,
@@ -357,6 +360,7 @@
 				120C7E0F1FC60E3C00A77B52 /* SecondViewController.swift in Sources */,
 				12DC09DE1FC74B2100B65AFE /* ChartViewController.swift in Sources */,
 				120C7E0B1FC60E3C00A77B52 /* AppDelegate.swift in Sources */,
+				124D82131FD1F9E000B3EEBA /* BarsAndLines.swift in Sources */,
 				120C7E0D1FC60E3C00A77B52 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
