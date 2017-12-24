@@ -90,7 +90,7 @@ class BarsAndLines: UIViewController {
             createDateAxisValue("07.10", readFormatter: readFormatter, displayFormatter: displayFormatter),
             createDateAxisValue("08.10", readFormatter: readFormatter, displayFormatter: displayFormatter)
         ]
-        let yValues = stride(from: 0, through: 100, by: 10).map {ChartAxisValuePercent($0, labelSettings: labelSettings)}
+        let yValues = stride(from: 0, through: 120, by: 10).map {ChartAxisValuePercent($0, labelSettings: labelSettings)}
         
         
         let xModel = ChartAxisModel(axisValues:xValues, axisTitleLabels: [ChartAxisLabel(text: "Date", settings: labelSettings)])

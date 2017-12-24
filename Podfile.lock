@@ -1,21 +1,29 @@
 PODS:
+  - PieCharts (0.0.5)
   - SwiftCharts (0.6)
 
 DEPENDENCIES:
+  - PieCharts (from `http://github.com/i-schuetz/PieCharts.git`)
   - SwiftCharts (from `https://github.com/i-schuetz/SwiftCharts.git`)
 
 EXTERNAL SOURCES:
+  PieCharts:
+    :git: http://github.com/i-schuetz/PieCharts.git
   SwiftCharts:
     :git: https://github.com/i-schuetz/SwiftCharts.git
 
 CHECKOUT OPTIONS:
+  PieCharts:
+    :commit: 4ad87bdf1ecdd4b6e14dbb53632e06064146a058
+    :git: http://github.com/i-schuetz/PieCharts.git
   SwiftCharts:
     :commit: dfd8f1063c342148d8b2b01f0f456f2c8d9bdbf8
     :git: https://github.com/i-schuetz/SwiftCharts.git
 
 SPEC CHECKSUMS:
+  PieCharts: 4935d6672fae20706f05aa5f7d854bfa1925e40f
   SwiftCharts: 84f84c2a94a3f51f055eeaacd9b8dc3ada3380eb
 
-PODFILE CHECKSUM: f9e0bd94075ad4d1adcc317712278e468448043b
+PODFILE CHECKSUM: eba449196c096a1f77c7b7db01873e034abe7eae
 
 COCOAPODS: 1.3.1

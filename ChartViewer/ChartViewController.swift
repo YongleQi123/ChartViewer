@@ -4,19 +4,20 @@ import SwiftCharts
 class ChartViewController: UIViewController {
     
     fileprivate var chart: Chart? // arc
+    @IBOutlet weak var progressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
         
-        var readFormatter = DateFormatter()
+        let readFormatter = DateFormatter()
         readFormatter.dateFormat = "dd"
         
-        var displayFormatter = DateFormatter()
+        let displayFormatter = DateFormatter()
         displayFormatter.dateFormat = "dd"
         
-        let date = {(str: String) -> Date in
+       let date = {(str: String) -> Date in
             return readFormatter.date(from: str)!
         }
         
@@ -30,11 +31,11 @@ class ChartViewController: UIViewController {
             return calendar.date(from: components)!
         }
         
-   /*     func filler(_ date: Date) -> ChartAxisValueDate {
+       func filler(_ date: Date) -> ChartAxisValueDate {
             let filler = ChartAxisValueDate(date: date, formatter: displayFormatter)
             filler.hidden = true
             return filler
-        } */
+        }
         
         let chartPoints1 = [
             createChartPoint(dateStr: "01", percent: 0, readFormatter: readFormatter, displayFormatter: displayFormatter),
@@ -64,6 +65,8 @@ class ChartViewController: UIViewController {
             createChartPoint(dateStr: "10", percent: 50, readFormatter: readFormatter, displayFormatter: displayFormatter),
             createChartPoint(dateStr: "11", percent: 60, readFormatter: readFormatter, displayFormatter: displayFormatter)
         ]
+        let myPercent: Double = chartPoints2.last?.y.scalar ?? 0.00
+        self.progressLabel.text = String("status: \(myPercent)%")
         
         let yValues = stride(from: 0, through: 100, by: 10).map {ChartAxisValuePercent($0, labelSettings: labelSettings)}
         
@@ -86,24 +89,24 @@ class ChartViewController: UIViewController {
         let yModel = ChartAxisModel(axisValues: yValues)
         let chartFrame = ExamplesDefaults.chartFrame(view.bounds)
         var chartSettings = ExamplesDefaults.chartSettingsWithPanZoom
+        
+        chartSettings.trailing = 20
+        chartSettings.labelsToAxisSpacingX = 20
+        chartSettings.labelsToAxisSpacingY = 20
         //chartSettings.trailing = 20
         
         /*
-        let chartraFrame = ExamplesDefaults.chartFrame(view.bounds)
-        
-        let chartSettings = ExamplesDefaults.chartSettingsWithPanZoom
-        
         let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
         let (xAxisLayer, yAxisLayer, innerFrame) = (coordsSpace.xAxisLayer, coordsSpace.yAxisLayer, coordsSpace.chartInnerFrame)
          */
         
         // Set a fixed (horizontal) scrollable area 2x than the original width, with zooming disabled.
-        /*
+        
         chartSettings.zoomPan.maxZoomX = 1
         chartSettings.zoomPan.minZoomX = 1
-        chartSettings.zoomPan.minZoomY = 0.5
-        chartSettings.zoomPan.maxZoomY = 2
- */
+        chartSettings.zoomPan.minZoomY = 1
+        chartSettings.zoomPan.maxZoomY = 1
+ 
         
         let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
         let (xAxisLayer, yAxisLayer, innerFrame) = (coordsSpace.xAxisLayer, coordsSpace.yAxisLayer, coordsSpace.chartInnerFrame)
@@ -117,6 +120,14 @@ class ChartViewController: UIViewController {
         
         let chartPointsLineLayer = ChartPointsLineLayer(xAxis: xAxisLayer.axis, yAxis: yAxisLayer.axis, lineModels: [lineModel1,lineModel2], pathGenerator: CatmullPathGenerator()) // || CubicLinePathGenerator
         
+        let c1 = UIColor(red: 0.1, green: 0.1, blue: 0.9, alpha: 0.4)
+        let c2 = UIColor(red: 0.9, green: 0.1, blue: 0.1, alpha: 0.4)
+        
+        let chartPointsLayer1 = ChartPointsAreaLayer(xAxis: xAxisLayer.axis, yAxis: yAxisLayer.axis, chartPoints: chartPoints1, areaColors: [c1], animDuration: 3, animDelay: 0, addContainerPoints: true, pathGenerator: chartPointsLineLayer.pathGenerator)
+        
+        let chartPointsLayer2 = ChartPointsAreaLayer(xAxis: xAxisLayer.axis, yAxis: yAxisLayer.axis, chartPoints: chartPoints2, areaColors: [c2], animDuration: 3, animDelay: 0, addContainerPoints: true, pathGenerator: chartPointsLineLayer.pathGenerator)
+        
+        
         //let guidelinesLayerSettings = ChartGuideLinesLayerSettings(linesColor: UIColor.black, linesWidth: 0.3)
         //let guidelinesLayer = ChartGuideLinesLayer(xAxisLayer: xAxisLayer, yAxisLayer: yAxisLayer, settings: guidelinesLayerSettings)
         
@@ -128,17 +139,21 @@ class ChartViewController: UIViewController {
                 xAxisLayer,
                 yAxisLayer,
                 //guidelinesLayer,
-                chartPointsLineLayer]
+                chartPointsLineLayer,
+                chartPointsLayer1,
+                chartPointsLayer2
+                ]
         )
         
         view.addSubview(chart.view)
         
         
+        
         // Set scrollable area 2x than the original width, with zooming enabled. This can also be combined with e.g. minZoomX to allow only larger zooming levels.
-            chart.zoom(scaleX: 1, scaleY: 1, centerX: 0, centerY: 0)
+            //chart.zoom(scaleX: 1, scaleY: 1, centerX: 0, centerY: 0)
         
         // Now that the chart is zoomed (either with minZoom setting or programmatic zooming), trigger drawing of the line layer. Important: This requires delayInit paramter in line layer to be set to true.
-        chartPointsLineLayer.initScreenLines(chart)
+        //chartPointsLineLayer.initScreenLines(chart)
         
         
         self.chart = chart
@@ -150,7 +165,7 @@ class ChartViewController: UIViewController {
     
     func createDateAxisValue(_ dateStr: String, readFormatter: DateFormatter, displayFormatter: DateFormatter) -> ChartAxisValue {
         let date = readFormatter.date(from: dateStr)!
-        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont, rotation: 45, rotationKeep: .top)
+        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont, rotation: 0, rotationKeep: .top)
         return ChartAxisValueDate(date: date, formatter: displayFormatter, labelSettings: labelSettings)
     }
     
