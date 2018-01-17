@@ -34,7 +34,7 @@ open class ChartPointTargetingView: UIView {
         lineVertical = UIView(frame: CGRect(x: axisOriginX, y: axisOriginY, width: CGFloat(lineWidth), height: axisLengthY))
         
         lineHorizontal.backgroundColor = UIColor.black
-        lineVertical.backgroundColor = UIColor.red
+        lineVertical.backgroundColor = UIColor.black
         
         let lineWidthHalf = lineWidth / 2
         var targetFrameH = lineHorizontal.frame

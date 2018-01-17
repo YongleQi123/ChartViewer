@@ -1,16 +1,15 @@
 //
 //  ExamplesDefaults.swift
-//  SwiftCharts
+//  myCharts
 //
-//  Created by ischuetz on 04/05/15.
-//  Copyright (c) 2015 ivanschuetz. All rights reserved.
+//  Created by 齐永乐 on 2017/12/24.
+//  Copyright © 2017年 Apple Inc. All rights reserved.
 //
 
 import UIKit
 import SwiftCharts
 
 struct ExamplesDefaults {
-    
     static var chartSettings: ChartSettings {
         if Env.iPad {
             return iPadChartSettings
@@ -46,8 +45,8 @@ struct ExamplesDefaults {
     fileprivate static var iPhoneChartSettings: ChartSettings {
         var chartSettings = ChartSettings()
         chartSettings.leading = 1
-        chartSettings.top = 1
-        chartSettings.trailing = 1
+        chartSettings.top = 20
+        chartSettings.trailing = 20
         chartSettings.bottom = 1
         chartSettings.labelsToAxisSpacingX = 5
         chartSettings.labelsToAxisSpacingY = 5
@@ -74,7 +73,7 @@ struct ExamplesDefaults {
     }
     
     static func chartFrame(_ containerBounds: CGRect) -> CGRect {
-        return CGRect(x: 0, y: 70, width: containerBounds.size.width, height: containerBounds.size.height-100)
+        return CGRect(x: 0, y: 10, width: containerBounds.size.width, height: containerBounds.size.height-70)
     }
     
     static var labelSettings: ChartLabelSettings {
@@ -100,5 +99,5 @@ struct ExamplesDefaults {
     static var minBarSpacing: CGFloat {
         return Env.iPad ? 10 : 5
     }
+    
 }
-
