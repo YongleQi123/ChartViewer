@@ -33,7 +33,20 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="775-iE-krj">
+                                <rect key="frame" x="347" y="47" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="775-iE-krj" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="6hK-Ux-ePr"/>
+                            <constraint firstItem="775-iE-krj" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="47" id="H5v-FW-MjX"/>
+                            <constraint firstItem="775-iE-krj" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Lig-kY-0hu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
@@ -51,6 +64,9 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="MultiLines" image="second" id="Vhf-8p-Ivb"/>
+                    <connections>
+                        <outlet property="myLabel" destination="775-iE-krj" id="eSe-JK-mdj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

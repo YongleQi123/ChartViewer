@@ -6,79 +6,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChartViewer/Env.swift"
-            timestampString = "536185693.863328"
+            filePath = "ChartViewer/ChartViewController.swift"
+            timestampString = "538947775.6115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "Env"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ChartViewer.Env.deinit"
-                  moduleName = "ChartViewer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YongleQi/Desktop/ChartViewer/ChartViewer/Env.swift"
-                  timestampString = "537909089.338845"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ChartViewer.Env.__deallocating_deinit"
-                  moduleName = "ChartViewer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YongleQi/Desktop/ChartViewer/ChartViewer/Env.swift"
-                  timestampString = "537909089.3616951"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ChartViewer.Env.__allocating_init() -&gt; ChartViewer.Env"
-                  moduleName = "ChartViewer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YongleQi/Desktop/ChartViewer/ChartViewer/Env.swift"
-                  timestampString = "537909089.365606"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ChartViewer.Env.init() -&gt; ChartViewer.Env"
-                  moduleName = "ChartViewer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YongleQi/Desktop/ChartViewer/ChartViewer/Env.swift"
-                  timestampString = "537909089.387844"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

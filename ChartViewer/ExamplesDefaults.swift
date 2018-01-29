@@ -14,7 +14,7 @@ struct ExamplesDefaults {
         if Env.iPad {
             return iPadChartSettings
         } else {
-            return iPhoneChartSettings
+            return iPhoneHalfChartSettings
         }
     }
     
@@ -58,6 +58,22 @@ struct ExamplesDefaults {
         return chartSettings
     }
     
+    fileprivate static var iPhoneHalfChartSettings: ChartSettings {
+        var chartSettings = ChartSettings()
+        chartSettings.leading = 1
+        chartSettings.top = 350
+        chartSettings.trailing = 20
+        chartSettings.bottom = 1
+        chartSettings.labelsToAxisSpacingX = 5
+        chartSettings.labelsToAxisSpacingY = 5
+        chartSettings.axisTitleLabelsToLabelsSpacing = 4
+        chartSettings.axisStrokeWidth = 0.2
+        chartSettings.spacingBetweenAxesX = 8
+        chartSettings.spacingBetweenAxesY = 8
+        chartSettings.labelsSpacing = 0
+        return chartSettings
+    }
+    
     fileprivate static var iPadChartSettingsWithPanZoom: ChartSettings {
         var chartSettings = iPadChartSettings
         chartSettings.zoomPan.panEnabled = true
@@ -66,7 +82,7 @@ struct ExamplesDefaults {
     }
     
     fileprivate static var iPhoneChartSettingsWithPanZoom: ChartSettings {
-        var chartSettings = iPhoneChartSettings
+        var chartSettings = iPhoneHalfChartSettings
         chartSettings.zoomPan.panEnabled = true
         chartSettings.zoomPan.zoomEnabled = true
         return chartSettings
