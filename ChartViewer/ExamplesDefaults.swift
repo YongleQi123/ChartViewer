@@ -61,7 +61,7 @@ struct ExamplesDefaults {
     fileprivate static var iPhoneHalfChartSettings: ChartSettings {
         var chartSettings = ChartSettings()
         chartSettings.leading = 1
-        chartSettings.top = 350
+        chartSettings.top = 250
         chartSettings.trailing = 20
         chartSettings.bottom = 1
         chartSettings.labelsToAxisSpacingX = 5

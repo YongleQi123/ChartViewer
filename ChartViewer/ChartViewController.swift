@@ -10,7 +10,7 @@ class ChartViewController: UIViewController ,PieChartDelegate {
     
     fileprivate var chart: Chart? // arc
 
-    let pieChartView: PieChart = PieChart(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+    let pieChartView: PieChart = PieChart(frame: CGRect(x: 0, y: -200, width: (UIScreen.main.bounds.width), height: (UIScreen.main.bounds.height)))
     fileprivate static let pieAlpha: CGFloat = 0.5
     let colors = [
         UIColor.yellow.withAlphaComponent(pieAlpha),
@@ -68,7 +68,7 @@ class ChartViewController: UIViewController ,PieChartDelegate {
         let calendar = Calendar.current
         let startStr = "01.12.2017"
         var startDate = readFormatter.date(from: startStr) // Should be connected to calendar
-        let endStr = "31.01.2018"
+        let endStr = "20.02.2018"
         let endDate = readFormatter.date(from: endStr) // Shoule be connected to calendar
         var thisDate = Date()
         let currentStr = readFormatter.string(from: thisDate)
